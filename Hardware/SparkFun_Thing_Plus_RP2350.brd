@@ -2080,6 +2080,31 @@ Pasted was reduced by 40% width on the center ground pad, and some amount on the
 <text x="0" y="1.524" size="0.254" layer="25" font="vector" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.778" size="0.254" layer="27" font="vector" align="bottom-center">&gt;VALUE</text>
 </package>
+<package name="SOT8">
+<smd name="1" x="-0.74" y="0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="2" x="-0.74" y="0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="3" x="-0.74" y="-0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="4" x="-0.74" y="-0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="5" x="0.74" y="-0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="6" x="0.74" y="-0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="7" x="0.74" y="0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<smd name="8" x="0.74" y="0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
+<wire x1="-0.6" y1="-1.05" x2="0.6" y2="-1.05" width="0.1" layer="51"/>
+<wire x1="0.6" y1="-1.05" x2="0.6" y2="1.05" width="0.1" layer="51"/>
+<wire x1="0.6" y1="1.05" x2="-0.6" y2="1.05" width="0.1" layer="51"/>
+<wire x1="-0.6" y1="1.05" x2="-0.6" y2="-1.05" width="0.1" layer="51"/>
+<wire x1="-0.6" y1="1.2" x2="0.6" y2="1.2" width="0.2" layer="21"/>
+<wire x1="-0.6" y1="-1.2" x2="0.6" y2="-1.2" width="0.2" layer="21"/>
+<circle x="-1.1" y="1.4" radius="0.3" width="0" layer="21"/>
+<rectangle x1="-1.13" y1="0.55" x2="-0.36" y2="0.95" layer="29"/>
+<rectangle x1="-1.13" y1="0.05" x2="-0.36" y2="0.45" layer="29"/>
+<rectangle x1="-1.13" y1="-0.45" x2="-0.36" y2="-0.05" layer="29"/>
+<rectangle x1="-1.13" y1="-0.95" x2="-0.36" y2="-0.55" layer="29"/>
+<rectangle x1="0.36" y1="-0.95" x2="1.13" y2="-0.55" layer="29"/>
+<rectangle x1="0.36" y1="-0.45" x2="1.13" y2="-0.05" layer="29"/>
+<rectangle x1="0.36" y1="0.05" x2="1.13" y2="0.45" layer="29"/>
+<rectangle x1="0.36" y1="0.55" x2="1.13" y2="0.95" layer="29"/>
+</package>
 </packages>
 </library>
 <library name="SparkFun-Capacitors">
@@ -2112,35 +2137,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-0.9262" y1="0.4262" x2="-0.9262" y2="-0.4262" width="0.05" layer="39"/>
 <wire x1="-0.9262" y1="-0.4262" x2="0.9262" y2="-0.4262" width="0.05" layer="39"/>
 <wire x1="0.9262" y1="-0.4262" x2="0.9262" y2="0.4262" width="0.05" layer="39"/>
-</package>
-</packages>
-</library>
-<library name="SparkFun_Thing_Plus_RA6M5">
-<packages>
-<package name="SOT8">
-<smd name="1" x="-0.74" y="0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="2" x="-0.74" y="0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="3" x="-0.74" y="-0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="4" x="-0.74" y="-0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="5" x="0.74" y="-0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="6" x="0.74" y="-0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="7" x="0.74" y="0.25" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<smd name="8" x="0.74" y="0.75" dx="0.67" dy="0.3" layer="1" stop="no"/>
-<wire x1="-0.6" y1="-1.05" x2="0.6" y2="-1.05" width="0.1" layer="51"/>
-<wire x1="0.6" y1="-1.05" x2="0.6" y2="1.05" width="0.1" layer="51"/>
-<wire x1="0.6" y1="1.05" x2="-0.6" y2="1.05" width="0.1" layer="51"/>
-<wire x1="-0.6" y1="1.05" x2="-0.6" y2="-1.05" width="0.1" layer="51"/>
-<wire x1="-0.6" y1="1.2" x2="0.6" y2="1.2" width="0.2" layer="21"/>
-<wire x1="-0.6" y1="-1.2" x2="0.6" y2="-1.2" width="0.2" layer="21"/>
-<circle x="-1.1" y="1.4" radius="0.3" width="0" layer="21"/>
-<rectangle x1="-1.13" y1="0.55" x2="-0.36" y2="0.95" layer="29"/>
-<rectangle x1="-1.13" y1="0.05" x2="-0.36" y2="0.45" layer="29"/>
-<rectangle x1="-1.13" y1="-0.45" x2="-0.36" y2="-0.05" layer="29"/>
-<rectangle x1="-1.13" y1="-0.95" x2="-0.36" y2="-0.55" layer="29"/>
-<rectangle x1="0.36" y1="-0.95" x2="1.13" y2="-0.55" layer="29"/>
-<rectangle x1="0.36" y1="-0.45" x2="1.13" y2="-0.05" layer="29"/>
-<rectangle x1="0.36" y1="0.05" x2="1.13" y2="0.45" layer="29"/>
-<rectangle x1="0.36" y1="0.55" x2="1.13" y2="0.95" layer="29"/>
 </package>
 </packages>
 </library>
@@ -13656,6 +13652,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="U2" library="RM2" package="RM2" value="RM2" x="11.43" y="50.165" smashed="yes">
 <attribute name="NAME" x="11.43" y="59.165" size="0.6096" layer="25" font="vector" ratio="20" align="center"/>
+<attribute name="PROD_ID" value="IC-21607" x="11.43" y="50.165" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="11.43" y="40.665" size="0.6096" layer="27" font="vector" ratio="20" align="center"/>
 </element>
 <element name="J1" library="SparkFun-Boards" package="THING_PLUS" value="THING_PLUS_LOGICAL" x="0" y="0" smashed="yes">
@@ -13760,7 +13757,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <attribute name="PROD_ID" value="RES-15185" x="9.525" y="16.518" size="1.778" layer="28" font="vector" ratio="15" rot="MR90" display="off"/>
 <attribute name="VALUE" x="8.763" y="16.518" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="U4" library="SparkFun_Thing_Plus_RA6M5" package="SOT8" value="LM66200" x="6.985" y="16.51" smashed="yes" rot="MR0">
+<element name="U4" library="SparkFun-IC-Power" package="SOT8" value="LM66200" x="6.985" y="16.51" smashed="yes" rot="MR0">
 <attribute name="PROD_ID" value="IC-20783" x="6.985" y="16.51" size="1.778" layer="28" font="vector" ratio="15" rot="MR0" display="off"/>
 </element>
 <element name="R8" library="SparkFun-Resistors" package="0402-TIGHT" value="10k" x="6.993" y="18.415" smashed="yes" rot="MR180">

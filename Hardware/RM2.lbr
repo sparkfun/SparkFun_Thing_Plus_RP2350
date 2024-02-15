@@ -264,7 +264,9 @@
 <connect gate="G$1" pin="WLON" pad="B5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="IC-21607"/>
+</technology>
 </technologies>
 </device>
 </devices>
