@@ -15488,7 +15488,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <wire x1="18.18" y1="48.215" x2="19.513" y2="48.215" width="0.2032" layer="1"/>
 <wire x1="19.513" y1="48.215" x2="19.812" y2="48.514" width="0.2032" layer="1"/>
 </signal>
-<signal name="!SD_DET!">
+<signal name="SD_DET">
 <contactref element="J6" pad="9"/>
 <wire x1="12.065" y1="8.763" x2="12.065" y2="8.036" width="0.2032" layer="16"/>
 <wire x1="12.065" y1="8.036" x2="11.865" y2="7.836" width="0.2032" layer="16"/>

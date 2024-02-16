@@ -24546,7 +24546,7 @@ Exposes the minimal pins needed to implement a USB 2.x legacy device.</descripti
 <pin name="DAT2" x="-10.16" y="5.08" visible="pin" length="short"/>
 <pin name="DAT1" x="-10.16" y="2.54" visible="pin" length="short"/>
 <pin name="CLK/SCK" x="-10.16" y="-2.54" visible="pin" length="short"/>
-<pin name="!DET!" x="-10.16" y="10.16" visible="pin" length="short"/>
+<pin name="DET" x="-10.16" y="10.16" visible="pin" length="short"/>
 <pin name="VDD" x="-10.16" y="12.7" visible="pin" length="short"/>
 <text x="-7.62" y="15.748" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <text x="-7.62" y="-15.24" size="1.778" layer="96" font="vector">&gt;VALUE</text>
@@ -25069,13 +25069,13 @@ If designing 4-layer board, make sure to select the variant &lt;strong&gt;_4-LAY
 <devices>
 <device name="" package="MICROSD_ATOM">
 <connects>
-<connect gate="G$1" pin="!DET!" pad="9"/>
 <connect gate="G$1" pin="CLK/SCK" pad="5"/>
 <connect gate="G$1" pin="CMD/SDI" pad="3"/>
 <connect gate="G$1" pin="DAT0/SDO" pad="7"/>
 <connect gate="G$1" pin="DAT1" pad="8"/>
 <connect gate="G$1" pin="DAT2" pad="1"/>
 <connect gate="G$1" pin="DAT3/!CS!" pad="2"/>
+<connect gate="G$1" pin="DET" pad="9"/>
 <connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2 SHIELD3 SHIELD4"/>
 <connect gate="G$1" pin="VDD" pad="4"/>
 <connect gate="G$1" pin="VSS" pad="6"/>
@@ -32350,9 +32350,9 @@ disconnect power LEd</text>
 <pinref part="J1" gate="G$1" pin="A5"/>
 </segment>
 </net>
-<net name="!SD_DET!" class="0">
+<net name="SD_DET" class="0">
 <segment>
-<pinref part="J6" gate="G$1" pin="!DET!"/>
+<pinref part="J6" gate="G$1" pin="DET"/>
 <wire x1="281.94" y1="190.5" x2="279.4" y2="190.5" width="0.1524" layer="91"/>
 <label x="279.4" y="190.5" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
