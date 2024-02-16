@@ -32548,6 +32548,18 @@ peripherals default to off</text>
 <pinref part="J1" gate="G$1" pin="A5"/>
 </segment>
 </net>
+<net name="!BATT_ALERT!" class="0">
+<segment>
+<pinref part="U8" gate="U1" pin="!ALRT"/>
+<wire x1="391.16" y1="251.46" x2="393.7" y2="251.46" width="0.1524" layer="91"/>
+<label x="393.7" y="251.46" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<wire x1="198.12" y1="142.24" x2="200.66" y2="142.24" width="0.1524" layer="91"/>
+<label x="200.66" y="142.24" size="1.27" layer="95" font="vector" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="GPIO15"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
