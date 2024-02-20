@@ -30674,6 +30674,7 @@ Iout Max: 600mA</text>
 <text x="292.1" y="134.62" size="1.778" layer="97" font="vector" align="center">Vin Max: 5.5V
 Iout Max: 600mA</text>
 <text x="180.34" y="187.96" size="1.778" layer="97" font="vector" align="center"></text>
+<text x="309.88" y="264.16" size="1.778" layer="97" font="vector" align="center">Single-cell LiPo only!</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="180.34" y="142.24" smashed="yes">
