@@ -194,7 +194,7 @@
 <wire x1="8.255" y1="15.24" x2="9.525" y2="15.24" width="0.254" layer="21"/>
 <wire x1="8.89" y1="20.955" x2="8.89" y2="19.685" width="0.254" layer="21"/>
 <wire x1="8.89" y1="15.875" x2="8.89" y2="14.605" width="0.254" layer="21"/>
-<text x="0.889" y="21.336" size="1.27" layer="16" font="vector" ratio="15" rot="MR270" align="center">v02</text>
+<text x="0.889" y="21.336" size="1.27" layer="16" font="vector" ratio="15" rot="MR270" align="center">v10</text>
 <text x="92.71" y="-7.62" size="1.778" layer="51" font="vector">Dryw Wade</text>
 <dimension x1="5.08" y1="8.89" x2="5.08" y2="0" x3="-1.27" y3="4.445" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <dimension x1="3.81" y1="17.78" x2="3.81" y2="0" x3="-8.89" y3="8.89" textsize="1.778" textratio="15" layer="47" unit="inch"/>
@@ -13373,7 +13373,7 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 </element>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LEDGER" x="66.04" y="-7.62" smashed="yes">
 <attribute name="DESIGNER" value="Dryw Wade" x="66.04" y="-7.62" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
-<attribute name="REV" value="v02" x="66.04" y="-7.62" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="REV" value="v10" x="66.04" y="-7.62" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
 <element name="Y1" library="SparkFun-Clocks" package="CRYSTAL-SMD-2X2.5MM" value="12MHz" x="17.018" y="36.83" smashed="yes">
 <attribute name="NAME" x="17.026" y="38.606" size="0.6096" layer="25" font="vector" ratio="12" align="bottom-center"/>
