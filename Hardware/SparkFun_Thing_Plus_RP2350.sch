@@ -30864,6 +30864,10 @@ Iout Max: 600mA</text>
 <text x="309.88" y="264.16" size="1.778" layer="97" font="vector" align="center">Single-cell LiPo only!</text>
 <text x="170.18" y="55.88" size="2.54" layer="94" font="vector" align="center">8MB PSRAM</text>
 <wire x1="111.76" y1="60.96" x2="228.6" y2="60.96" width="0.2032" layer="97" style="longdash"/>
+<text x="256.54" y="180.34" size="1.778" layer="97" font="vector" align="center">**WARNING**
+Do not set SPI pins high while the
+uSD card is unpowered. Doing so
+could damage the GPIO pins!</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="180.34" y="142.24" smashed="yes">
@@ -31341,8 +31345,8 @@ Iout Max: 600mA</text>
 <attribute name="NAME" x="78.74" y="247.396" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
 <attribute name="VALUE" x="86.36" y="247.396" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="GND43" gate="1" x="279.4" y="165.1" smashed="yes">
-<attribute name="VALUE" x="279.4" y="164.846" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="GND43" gate="1" x="289.56" y="162.56" smashed="yes">
+<attribute name="VALUE" x="289.56" y="162.306" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY41" gate="G$1" x="347.98" y="132.08" smashed="yes">
 <attribute name="VALUE" x="347.98" y="134.874" size="1.778" layer="96" font="vector" align="bottom-center"/>
@@ -31402,9 +31406,9 @@ Iout Max: 600mA</text>
 <instance part="GND41" gate="1" x="177.8" y="241.3" smashed="yes">
 <attribute name="VALUE" x="177.8" y="241.046" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="J6" gate="G$1" x="292.1" y="180.34" smashed="yes">
-<attribute name="NAME" x="284.48" y="196.088" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="284.48" y="165.1" size="1.778" layer="96" font="vector"/>
+<instance part="J6" gate="G$1" x="302.26" y="177.8" smashed="yes">
+<attribute name="NAME" x="294.64" y="193.548" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="294.64" y="162.56" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="U9" gate="G$1" x="292.1" y="119.38" smashed="yes">
 <attribute name="NAME" x="284.48" y="127.254" size="1.778" layer="95" font="vector"/>
@@ -31413,8 +31417,8 @@ Iout Max: 600mA</text>
 <instance part="SUPPLY11" gate="G$1" x="40.64" y="35.56" smashed="yes">
 <attribute name="VALUE" x="40.64" y="38.354" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY31" gate="G$1" x="279.4" y="195.58" smashed="yes">
-<attribute name="VALUE" x="279.4" y="198.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<instance part="SUPPLY31" gate="G$1" x="289.56" y="193.04" smashed="yes">
+<attribute name="VALUE" x="289.56" y="195.834" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY40" gate="G$1" x="391.16" y="195.58" smashed="yes">
 <attribute name="VALUE" x="391.16" y="198.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
@@ -31741,13 +31745,13 @@ Iout Max: 600mA</text>
 </segment>
 <segment>
 <pinref part="GND43" gate="1" pin="GND"/>
-<wire x1="279.4" y1="167.64" x2="279.4" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="170.18" x2="281.94" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="165.1" x2="289.56" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="167.64" x2="292.1" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="J6" gate="G$1" pin="VSS"/>
 <pinref part="J6" gate="G$1" pin="SHIELD"/>
-<wire x1="279.4" y1="170.18" x2="279.4" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="172.72" x2="281.94" y2="172.72" width="0.1524" layer="91"/>
-<junction x="279.4" y="170.18"/>
+<wire x1="289.56" y1="167.64" x2="289.56" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="170.18" x2="292.1" y2="170.18" width="0.1524" layer="91"/>
+<junction x="289.56" y="167.64"/>
 </segment>
 <segment>
 <pinref part="GND44" gate="1" pin="GND"/>
@@ -32118,8 +32122,8 @@ Iout Max: 600mA</text>
 <pinref part="U1" gate="G$1" pin="GPIO4"/>
 </segment>
 <segment>
-<wire x1="281.94" y1="180.34" x2="279.4" y2="180.34" width="0.1524" layer="91"/>
-<label x="279.4" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="292.1" y1="177.8" x2="289.56" y2="177.8" width="0.1524" layer="91"/>
+<label x="289.56" y="177.8" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="G$1" pin="DAT0/SDO"/>
 </segment>
 </net>
@@ -32135,8 +32139,8 @@ Iout Max: 600mA</text>
 <pinref part="U1" gate="G$1" pin="GPIO3"/>
 </segment>
 <segment>
-<wire x1="281.94" y1="175.26" x2="279.4" y2="175.26" width="0.1524" layer="91"/>
-<label x="279.4" y="175.26" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="292.1" y1="172.72" x2="289.56" y2="172.72" width="0.1524" layer="91"/>
+<label x="289.56" y="172.72" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="G$1" pin="CMD/SDI"/>
 </segment>
 </net>
@@ -32152,8 +32156,8 @@ Iout Max: 600mA</text>
 <pinref part="U1" gate="G$1" pin="GPIO2"/>
 </segment>
 <segment>
-<wire x1="281.94" y1="177.8" x2="279.4" y2="177.8" width="0.1524" layer="91"/>
-<label x="279.4" y="177.8" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="292.1" y1="175.26" x2="289.56" y2="175.26" width="0.1524" layer="91"/>
+<label x="289.56" y="175.26" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="G$1" pin="CLK/SCK"/>
 </segment>
 </net>
@@ -32263,7 +32267,8 @@ Iout Max: 600mA</text>
 <wire x1="185.42" y1="228.6" x2="187.96" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="228.6" x2="185.42" y2="236.22" width="0.1524" layer="91"/>
 <junction x="185.42" y="228.6"/>
-<label x="185.42" y="236.22" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
+<label x="182.88" y="236.22" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="185.42" y1="236.22" x2="182.88" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="WL_CLK" class="0">
@@ -32498,7 +32503,8 @@ Iout Max: 600mA</text>
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="190.5" x2="76.2" y2="193.04" width="0.1524" layer="91"/>
-<label x="76.2" y="193.04" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
+<label x="73.66" y="193.04" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="76.2" y1="193.04" x2="73.66" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="QSPI_D3" class="0">
@@ -32801,8 +32807,8 @@ Iout Max: 600mA</text>
 </net>
 <net name="SD_!CS!" class="0">
 <segment>
-<wire x1="281.94" y1="187.96" x2="279.4" y2="187.96" width="0.1524" layer="91"/>
-<label x="279.4" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="292.1" y1="185.42" x2="289.56" y2="185.42" width="0.1524" layer="91"/>
+<label x="289.56" y="185.42" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="G$1" pin="DAT3/!CS!"/>
 </segment>
 <segment>
@@ -32874,8 +32880,8 @@ Iout Max: 600mA</text>
 <net name="SD_DET" class="0">
 <segment>
 <pinref part="J6" gate="G$1" pin="DET"/>
-<wire x1="281.94" y1="190.5" x2="279.4" y2="190.5" width="0.1524" layer="91"/>
-<label x="279.4" y="190.5" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="292.1" y1="187.96" x2="289.56" y2="187.96" width="0.1524" layer="91"/>
+<label x="289.56" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="198.12" y1="154.94" x2="200.66" y2="154.94" width="0.1524" layer="91"/>
@@ -32890,8 +32896,8 @@ Iout Max: 600mA</text>
 <pinref part="SUPPLY11" gate="G$1" pin="3.3V_SW"/>
 </segment>
 <segment>
-<wire x1="281.94" y1="193.04" x2="279.4" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="193.04" x2="279.4" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="190.5" x2="289.56" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="190.5" x2="289.56" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="J6" gate="G$1" pin="VDD"/>
 <pinref part="SUPPLY31" gate="G$1" pin="3.3V_SW"/>
 </segment>
