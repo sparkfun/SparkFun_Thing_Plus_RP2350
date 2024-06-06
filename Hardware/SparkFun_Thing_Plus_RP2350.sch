@@ -30868,6 +30868,7 @@ Iout Max: 600mA</text>
 Do not set SPI pins high while the
 uSD card is unpowered. Doing so
 could damage the GPIO pins!</text>
+<text x="331.724" y="6.604" size="2.54" layer="94" font="vector">Based on design by: Nathan Seidle</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="180.34" y="142.24" smashed="yes">

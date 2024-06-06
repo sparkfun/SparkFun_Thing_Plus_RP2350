@@ -227,6 +227,7 @@ Board thickness: 1.6mm
 Soldermask: Red
 Silkscreen: White
 Surface Finish: Lead-Free HASL</text>
+<text x="68.58" y="-10.16" size="1.778" layer="51" font="vector">Based on design by: Nathan Seidle</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
