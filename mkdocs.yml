@@ -254,9 +254,12 @@ nav:
     - Introduction: introduction.md
     - Hardware Overview: hardware_overview.md
     - Hardware Assembly: hardware_assembly.md
-    - RP2350 Software:
-      - Software Setup: software_setup.md
-      - Arduino Examples: examples.md
+    - Software Setup:
+      - UF2 Bootloader: uf2.md
+      - Pico SDK: picoSDK_setup.md
+      - MicroPython: micropython_setup.md
+      - Arduino: arduino_setup.md
+    - Examples: examples.md
   - Resources: resources.md
   - Support:
     - Troubleshooting: troubleshooting.md

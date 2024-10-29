@@ -6,7 +6,35 @@ Let's take a closer look at the RP2350 and other hardware components on this Thi
 
 ## RP2350 Microcontroller
 
+The RP2350 from Raspberry Pi packs a whole lot of computing punch in a tiny package. The RP2350 is a unique dual-core microcontroller that has <i>four</i> internal processors (two Arm Cortex-M33 and two Hazard3 RISC-V processors @150 MHz), though you can only select any two of these four to run at the same time. 
+
+This internal configuration allows users to customize the chip to their preferred architecture or to use one of each! The RP2350 includes 520kB of on-chip SRAM in ten independent banks, 8kB of one-time-programmable (OTP) storage and this board also includes PSRAM connected to the chip's QSPI bus. It also has a bevy of security features including optional boot signing with protected OTP storage for the boot decryption key, global bus filtering (based on either Arm or RISC-V security and privilege levels) and more.
+
+The Thing Plus - RP2350 uses the "A" version of the microcontroller which has 30 5V-tolerant GPIO with 4 analog inputs and also includes the following peripheral options:
+
+* 2x UART
+* 2x SPI
+* 2x I<sup>2</sup>C
+* 24 PWM
+* USB 1.1 Controller
+* 12 PIO State Machines
+* 1x High-Speed Transmit (HSTX) Peripheral for DVI/DSI support
+
+## Memory
+
+### W25Q128 Flash
+
+The W25Q128 Flash IC adds 16MB of storage space on the Thing Plus. This connects to the RP2350 over QSPI.
+
+### PSRAM
+
+The board also includes an 8MB PSRAM IC for dynamic storage. This also connects to the RP2350 over QSPI. PSRAM support is included in the SparkFun MicroPython "early release" firmware found later in this guide and on the product page, but is not natively supported in the Pico SDK as of release. Refer to the Arducam Demo section of this guide for information on how to enable and set up PSRAM using the Pico SDK.
+
+For a complete overview of the PSRAM IC, refer to the [datasheet](./assets/component_documentation/APS6404L_3SQR_Datasheet.pdf).
+
 ## Raspberry Pi RM2 Radio Module
+
+The Raspberry Pi RM2 (radio module 2) is built around the same chipset as the previous Raspberry Pi radio module found on boards like the Pico W. The module features both WiFi 4 (802.11n) 2.4GHz and  Bluetooth<sup>&trade;</sup> 5.2 with support for Low Energy (Central and Peripheral) and Classic. It communicates with the RP2350 over SPI. The Thing Plus routes the module's GPIO0 pin to a blue STAT LED to allow users to create a visual indicator of the status of the module. We added this STAT LED connected to the same pin used on the Pico W to make code for that compatible with the Thing Plus - RP2350.
 
 ## Power Components
 
@@ -46,11 +74,9 @@ The board has a &micro;SD card slot that connects to the RP2350's SPI bus. Make 
 
 There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RESET button is tied to the RP2350's RUN pin and resets the IC when pressed. The BOOT button puts the RP2350 into bootloader mode when held down during power on or reset.
 
-<figure markdown>
-[![Photo highlighting buttons.](./assets/img/Thing_Plus_ESP32S3-Buttons.jpg){ width="600"}](./assets/img/Thing_Plus_ESP32S3-Buttons.jpg "Click to enlarge")
-</figure>
-
 ## LEDs
+
+The Thing Plus - RP2350 includes two labeled LEDs; <b>PWR</b> and <b>STAT</b> as well as a WS2812 RGB LED. The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The blue <b>STAT</b> LED is tied to the RM2 radio module GPIO0 to be used for indicating when the module is transmiting/receiving data. The WS2812 RGB LED's DATA IN pin is tied to the RP2350 GPIO14 pin. The RGB LED's DATA OUT pin is routed to the FREEBIE PTH pin if users want to daisy-chain more LEDs to the board.
 
 ## Jumpers
 
@@ -62,18 +88,11 @@ There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RES
         How to Work with Jumper Pads and PCB Traces</a>
 	</p>
 
+This Thing Plus has two solder jumpers on the board labeled <b>PWR</b> and <b>I2C</b>. The <b>PWR</b> jumper completes the Power LED circuit and is CLOSED by default. Open the solder jumper by severing the trace in between the two pads to disable the Power LED if needed. The <b>I2C</b> jumper pulls the I<sup>2</sup>C lines (SDA/SCL) to <b>3.3V</b> through a pair of <b>2.2k&ohm;</b> resistors. This three-way jumper is CLOSED by default. Open the solder jumper to disable the pullup resistors on the I<sup>2</sup>C bus if needed.
 
 ## Board Dimensions
 
-The board dimensions are illustrated in the drawing below; the listed measurements are in inches.
-
-<figure markdown>
-[![Board Dimensions](../assets/img/dimensions.png){ width="400" }](../assets/img/dimensions.png "Click to enlarge")
-<figcaption markdown>
-[Board dimensions (PDF)](../assets/board_files/dimensions.pdf) for the <Product Name>, in inches.
-</figcaption>
-</figure>
-
+This board matches the Thing Plus footprint and measures and includes four mounting holes that fit a [4-40 screw](). Note, the RM2 antenna comes very close to the "top" two mounting holes so take care when securing anything to these holes to avoid damaging the radio's antenna. 
 
 ??? tip "Need more measurements?"
 	For more information about the board's dimensions, users can download the [Eagle files](../assets/board_files/eagle_files.zip) for the board. These files can be opened in Eagle and additional measurements can be made with the dimensions tool.
