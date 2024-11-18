@@ -3,15 +3,15 @@
 
 // Configuration for the display
 RP2_HSTX_ST7789_Config displayConfig = {
-    .pinDin  =    18, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinSck  =    19, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinCs   =    16, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinDc   =    17, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinRst  =    -1, // Any GPIO pin, or -1 if not connected
-    .pinBl   =    -1, // Any GPIO pin, or -1 if not connected
-    .width   =   320, // Display width
-    .height  =   240, // Display height
-    .rawMode = false, // Whether to use raw mode
+    .pinDin  =   18, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinSck  =   19, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinCs   =   16, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinDc   =   17, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinRst  =   -1, // Any GPIO pin, or -1 if not connected
+    .pinBl   =   -1, // Any GPIO pin, or -1 if not connected
+    .width   =  320, // Display width
+    .height  =  240, // Display height
+    .rawMode = true, // Whether to use raw mode
 };
 
 // Set up arch and pins structures for Pico RP2040.
