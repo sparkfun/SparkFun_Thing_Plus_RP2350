@@ -2,24 +2,26 @@
 #include "SparkFun_RP2_HSTX_ST7789_Arduino_Library.h"
 
 // Configuration for the display
-RP2_HSTX_ST7789_Config config = {
-    .pinDin =  18, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinSck =  19, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinCs  =  16, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinDc  =  17, // Must support HSTX (GPIO 12-19 on RP2350)
-    .pinRst =  -1, // Any GPIO pin, or -1 if not connected
-    .pinBl  =  -1, // Any GPIO pin, or -1 if not connected
-    .width  = 320, // Display width
-    .height = 240  // Display height
+RP2_HSTX_ST7789_Config displayConfig = {
+    .pinDin  =    18, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinSck  =    19, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinCs   =    16, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinDc   =    17, // Must support HSTX (GPIO 12-19 on RP2350)
+    .pinRst  =    -1, // Any GPIO pin, or -1 if not connected
+    .pinBl   =    -1, // Any GPIO pin, or -1 if not connected
+    .width   =   320, // Display width
+    .height  =   240, // Display height
+    .rawMode = false, // Whether to use raw mode
 };
 
 // Set up arch and pins structures for Pico RP2040.
 iCap_arch arch =
 {
-    .pio = pio2, // Can be pio0, pio1, or pio2 on the RP2350
+    .pio = pio0, // Can be pio0, pio1, or pio2 on the RP2350
     .bswap = false // Whether to swap the camera data bytes
 };
 
+// Pins for the OV5640 camera
 OV5640_pins pins =
 {
     .enable = -1, // Any GPIO pin, or -1 if not connected
@@ -54,13 +56,8 @@ void setup() {
         delay(1000);
     }
 
-    // // Read manufacturer and product IDs -- these are Bank 1 registers
-    // uint16_t chip_id = (cam.readRegister16(_CHIP_ID_HIGH) << 8) |
-    //                     cam.readRegister16(_CHIP_ID_HIGH+1);
-    // Serial.println(chip_id, HEX);
-
     // Initialize the display
-    display.begin(config);
+    display.begin(displayConfig);
 
     // Set the threshold pin as an input with pull-up
     pinMode(thresholdPin, INPUT_PULLUP);
@@ -81,12 +78,12 @@ void loop()
     display.startNewFrameRaw();
 
     // Loop through all pixels in the frame buffer
-    for (int y = 0; y < config.width; ++y)
+    for (int y = 0; y < displayConfig.width; ++y)
     {
-        for (int x = 0; x < config.height; ++x)
+        for (int x = 0; x < displayConfig.height; ++x)
         {
             // Get the pixel value from the camera buffer
-            int rgb = buffer[x * config.width + y];
+            int rgb = buffer[x * displayConfig.width + y];
 
             // Check whether thresholding is requested
             if(threshold)
