@@ -17,7 +17,7 @@ icon: material/book-open-page-variant
     ---
 
     <figre markdown>
-    ![Product Thumbnail](<Product Image Link>)
+    ![Product Thumbnail](https://cdn.sparkfun.com/r/600-600/assets/parts/2/5/5/9/0/25134-Thing-Plus-RP2350-Feature.jpg)
     </figure></a>
 
     <center>

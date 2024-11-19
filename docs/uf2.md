@@ -13,13 +13,13 @@ UF2 stands for USB Flashing Format, which was developed by Microsoft for PXT (no
 Putting the Pro Micro - RP2350 only requires a couple of presses of the BOOT and RESET buttons. Start by pressing and holding the BOOT button down:
 
 <figure markdown>
-[![Pressing the BOOT button.](./assets/img/){ width="600"}](./assets/img/ "Click to enlarge")
+[![Pressing the BOOT button.](./assets/img/Thing_Plus_RP2350-uF2_BOOT.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-uF2_BOOT.jpg "Click to enlarge")
 </figure>
 
 Next, press and release the RESET button while still holding down the BOOT button:
 
 <figure markdown>
-[![Photo highlighting RP2350.](./assets/img/){ width="600"}](./assets/img/ "Click to enlarge")
+[![Photo highlighting RP2350.](./assets/img/Thing_Plus_RP2350-uF2_RESET.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-uF2_RESET.jpg "Click to enlarge")
 </figure>
 
 Finally, release the BOOT button and the board should be in bootloader mode and appear on your computer as a USB storage device called "RP2350".
