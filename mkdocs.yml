@@ -260,7 +260,7 @@ nav:
       - MicroPython: micropython_setup.md
       - CircuitPython: circuitpython_setup.md
       - Arduino: arduino_setup.md
-    - Examples: examples.md
+    - MicroPython Examples: micropython_examples.md
   - Resources: resources.md
   - Support:
     - Troubleshooting: troubleshooting.md

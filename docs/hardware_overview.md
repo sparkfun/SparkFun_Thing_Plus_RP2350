@@ -64,6 +64,14 @@ The USB-C connector on the board acts as the primary serial interface for the RP
 
 ### 2-Pin JST Connector, Battery Charger, & Fuel Gauge
 
+??? note "Want some LiPo battery care tips?"
+	Check out our <a href="https://learn.sparkfun.com/tutorials/single-cell-lipo-battery-care">Single Cell LiPo Battery Care tutorial</a> for some helpful tips on handling and caring for them.
+	<p align="center">
+		<a href="https://learn.sparkfun.com/tutorials/single-cell-lipo-battery-care">
+		<img src="https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/3/0/4/5/Remove_2-pin_JST-PH_Connector_LiPo_Battery_Needle_Nose_Pliers_Wiggling-3.jpg" alt="Tutorial's thumbnail"><br>
+        Single Cell LiPo Battery Care</a>
+	</p>
+
 The board has a 2-pin JST connector to connect a single-cell Lithium Ion (LiPo) battery for battery-powered applications. It also has an MCP73831 battery charger to charge an attached battery and a MAX17048 fuel gauge to monitor battery voltage levels. The charge rate is set to <b>214mA@3.3V</b>. The MCP73831 receives power from the V_USB line so it only is powered when <b>5V</b> is provided either over USB or the V_USB PTH pin. If applying voltage directly to the V_USB pin make sure it does not exceed <b>5.5V</b>.
 
 The MAX17048's I<sup>2</sup>C lines are pulled up to <b>3.3V_P</b> to allow for customizable power options. Read on below for more information about peripheral power.
@@ -86,11 +94,13 @@ The Qwiic connector is tied to GPIO6 (SDA) and GPIO7 (SCL) pins on the RP2350. T
 
 ### PTH Headers
 
-The Thing Plus's pair of PTH headers break out a selection of 21 GPIO pins from the RP2350 along with PTH connections to USB voltage (5V), regulated 3.3V, battery voltage, RP2350 reset signal, and the voltage regulator Enable pin. The board also has a "central" row of three 0.1"-spaced headers that route to the 
+The Thing Plus's pair of PTH headers break out a selection of 21 GPIO pins from the RP2350 along with PTH connections to USB voltage (5V), regulated 3.3V, battery voltage, RP2350 reset signal, and the voltage regulator Enable pin. The board also has a "central" row of three 0.1"-spaced headers connected to the RP2350's internal Serial Wire Debug multi-drop bus. 
 
 <figure markdown>
 [![Photo highlighting PTH pins](./assets/img/Thing_Plus_RP2350-Pinout.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-Pinout.jpg "Click to enlarge")
 </figure>
+
+The pinout includes connections to UART, I<sup>2</sup>C, SPI, 13 GPIO (3 of analog-capable pins) and the WS2812's DATA OUT pin.
 
 ## &micro;SD Card Slot
 
@@ -116,7 +126,7 @@ The Thing Plus - RP2350 includes three labeled LEDs; <b>PWR</b>, <b>CHG</b> and 
 [![Photo highlighting the four LEDs on the board.](./assets/img/Thing_Plus_RP2350-LEDs.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-LEDs.jpg "Click to enlarge")
 </figure>
 
-The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The yellow <b>CHG</b> LED indicates when a connected LiPo battery is charging. The blue <b>STAT</b> LED is tied to the RM2 radio module GPIO0 to be used for indicating when the module is transmiting/receiving data. The WS2812 RGB LED's DATA IN pin is tied to the RP2350 GPIO14 pin. The RGB LED's DATA OUT pin is routed to the FREEBIE PTH pin if users want to daisy-chain more LEDs to the board.
+The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The yellow <b>CHG</b> LED indicates when the charge circuit is powered. The blue <b>STAT</b> LED is tied to the RM2 radio module GPIO0 to be used for indicating when the module is transmiting/receiving data. The WS2812 RGB LED's DATA IN pin is tied to the RP2350 GPIO14 pin. The RGB LED's DATA OUT pin is routed to the FREEBIE PTH (labeled LED on the board) if users want to daisy-chain more LEDs to the board.
 
 ## Jumpers
 
@@ -128,17 +138,27 @@ The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The yello
         How to Work with Jumper Pads and PCB Traces</a>
 	</p>
 
-This Thing Plus has two solder jumpers on the board labeled <b>PWR</b> and <b>I2C</b>. 
+This Thing Plus has four solder jumpers labeled <b>PWR</b>, <b>I2C</b>, <b>LP</b>, and <b>SHLD</b>. 
 
 <figure markdown>
 [![Photo highlighting solder jumpers.](./assets/img/Thing_Plus_RP2350-Jumpers.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-Jumpers.jpg "Click to enlarge")
 </figure>
 
-The <b>PWR</b> jumper completes the Power LED circuit and is CLOSED by default. Open the solder jumper by severing the trace in between the two pads to disable the Power LED if needed. The <b>I2C</b> jumper pulls the I<sup>2</sup>C lines (SDA/SCL) to <b>3.3V</b> through a pair of <b>2.2k&ohm;</b> resistors. This three-way jumper is CLOSED by default. Open the solder jumper to disable the pullup resistors on the I<sup>2</sup>C bus if needed.
+The <b>PWR</b> jumper completes the Power LED circuit and is CLOSED by default. Open the solder jumper by severing the trace in between the two pads to disable the Power LED if needed. 
+
+The <b>I2C</b> jumper pulls the I<sup>2</sup>C lines (SDA/SCL) to <b>3.3V</b> through a pair of <b>2.2k&ohm;</b> resistors. This three-way jumper is CLOSED by default. Open the solder jumper to disable the pullup resistors on the I<sup>2</sup>C bus if needed.
+
+The <b>LP</b> jumper controls whether the peripheral power regulator is always on or toggleable with an I/O pin (RP2350 GPIO13). This jumper is CLOSED by default so all peripherals (Qwiic connector, &micro;SD slot and RGB LED) are always powered on. Opening this jumper requires setting GPIO13 HIGH to enable peripheral power.
+
+The <b>SHLD</b> jumper connects the USB-C connector's shield pin to the board's ground plane. This jumper is CLOSED by default. Open it to isolate the shield pin from the board.
 
 ## Board Dimensions
 
-This board matches the Thing Plus footprint and measures and includes four mounting holes that fit a [4-40 screw](). Note, the RM2 antenna comes very close to the "top" two mounting holes so take care when securing anything to these holes to avoid damaging the radio's antenna. 
+This board matches the Thing Plus footprint and measures and includes four mounting holes that fit a [4-40 screw](https://www.sparkfun.com/products/10453). Note, the RM2 antenna comes very close to the "top" two mounting holes so take care when securing anything to these holes to avoid damaging the radio's antenna. 
+
+<figure markdown>
+[![Photo highlighting solder jumpers.](./assets/board_files/SparkFun_Thing_Plus_RP2350-Dimensions.png){ width="600"}](./assets/board_files/SparkFun_Thing_Plus_RP2350-Dimensions.png "Click to enlarge")
+</figure>
 
 ??? tip "Need more measurements?"
 	For more information about the board's dimensions, users can download the [Eagle files](../assets/board_files/eagle_files.zip) for the board. These files can be opened in Eagle and additional measurements can be made with the dimensions tool.

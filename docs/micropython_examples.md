@@ -22,15 +22,13 @@ gc.mem_free()
 8640352
 ```
 
-
-
 ## WS2812 LED Control
 
-Finally, we'll make sure we can properly control the WS2812 LED on the Thing Plus using the <code>machine</code> and <code>neopixel</code> classes. The WS2812 Data In pin connects to I/O 14 on the RP2350 so we'll create a pin for it as an OUTPUT and assign it to the LED object. Next, we'll set the color to red and finally write the color values to the LED. The code below goes through all these steps so try copying it on your machine and you should see the WS2812 LED turn red.
+Now let's make sure we can properly control the WS2812 LED on the Thing Plus using the <code>machine</code> and <code>neopixel</code> classes. The WS2812 Data In pin connects to I/O 14 but we've defined this pin as <b>"NEOPIXEL"</b> which takes care of assigning the pin and defining it as an output. Next, we'll set the color to red and finally write the color values to the LED. The code below goes through all these steps so try copying it on your machine and you should see the WS2812 LED turn red.
 
 ``` py
 import machine, neopixel
-pin = machine.Pin(14, machine.Pin.OUT)
+pin = machine.Pin("NEOPIXEL")
 led = neopixel.NeoPixel(pin, 1)
 led[0] = (255, 0, 0)
 led.write()
