@@ -26,7 +26,10 @@ icon: material/book-open-page-variant
     </article>
     </center>
 
--   The SparkFun Thing Plus - RP2350 is a dynamic and powerful wireless development platform in the Thing Plus form factor. Built around the RP2350 microcontroller from the Raspberry Pi Foundation, this board includes their radio module for single-band 2.4 GHz WiFi 4 (802.11n) and Bluetooth<sup>&reg;</sup> 5.2 along with common hardware components found on all Thing Plus Boards. This includes on-board Lithium Ion (LiPo) battery charging and fuel gauge circuits, &micro;SD card socket, Qwiic connector, and the Thing Plus pinout allowing use of the Thing Plus - RP2350 in a wide variety of both local and remote applications.
+-       The SparkFun Thing Plus - RP2350 is a dynamic and powerful wireless development platform in the Thing Plus form factor. Built around the RP2350 microcontroller from the Raspberry Pi Foundation, this board includes their radio module for single-band 2.4 GHz WiFi 4 (802.11n) and Bluetooth<sup>&reg;</sup> 5.2 along with common hardware components found on all Thing Plus Boards. This includes on-board Lithium Ion (LiPo) battery charging and fuel gauge circuits, &micro;SD card socket, Qwiic connector, and the Thing Plus pinout allowing use of the Thing Plus - RP2350 in a wide variety of both local and remote applications.
+<br>
+<br>
+The Raspberry Pi Radio Module (RM2) operates over an SPI interface, and we've designed this board to use the same pins for the radio module as official Raspberry Pi boards, making it easy to use the radio module without having to adjust anything from those development boards. The RP2350 Thing Plus includes two expanded memory options: 16MB of external Flash and 8MB PSRAM connected to the RP2350's QSPI controller. This Thing Plus board works with C/C++ using the Pico SDK, MicroPython, CircuitPython, and Arduino development environments.
 
     <center>
     [Purchase from SparkFun :fontawesome-solid-cart-plus:{ .heart }](https://www.sparkfun.com/products/25134){ .md-button .md-button--primary }

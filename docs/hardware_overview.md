@@ -12,7 +12,7 @@ The RP2350 from Raspberry Pi packs a whole lot of computing punch in a tiny pack
 [![Photo highlighting RP2350 processor](./assets/img/Thing_Plus_RP2350-RP2350.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-RP2350.jpg "Click to enlarge")
 </figure>
 
-This internal configuration allows users to customize the chip to their preferred architecture or to use one of each! The RP2350 includes 520kB of on-chip SRAM in ten independent banks, 8kB of one-time-programmable (OTP) storage and this board also includes PSRAM connected to the chip's QSPI bus. It also has a bevy of security features including optional boot signing with protected OTP storage for the boot decryption key, global bus filtering (based on either Arm or RISC-V security and privilege levels) and more.
+This internal configuration allows users to customize the chip to use a pair their preferred architecture (ARM or Hazard3) or to use one of each! The RP2350 includes 520kB of on-chip SRAM in ten independent banks, 8kB of one-time-programmable (OTP) storage and this board also includes PSRAM connected to the chip's QSPI bus. The RP2350 also has a bevy of security features including optional boot signing with protected OTP storage for the boot decryption key, global bus filtering (based on either Arm or RISC-V security and privilege levels) and more.
 
 The Thing Plus - RP2350 uses the "A" version of the microcontroller which has 30 5V-tolerant GPIO with 4 analog inputs and also includes the following peripheral options:
 
@@ -23,6 +23,8 @@ The Thing Plus - RP2350 uses the "A" version of the microcontroller which has 30
 * USB 1.1 Controller
 * 12 PIO State Machines
 * 1x High-Speed Transmit (HSTX) Peripheral for DVI/DSI support
+
+For complete information on the RP2350, refer to the [datasheet](./assets/component_documentation/rp2350-datasheet.pdf).
 
 ## Memory
 
@@ -40,6 +42,14 @@ The board also includes an 8MB PSRAM IC for dynamic storage. This also connects 
 
 For a complete overview of the PSRAM IC, refer to the [datasheet](./assets/component_documentation/APS6404L_3SQR_Datasheet.pdf).
 
+### &micro;SD Card Slot
+
+The board has a &micro;SD card slot that connects to the RP2350's SPI bus for even more storage. Make sure the SPI are **LOW** when the &micro;SD card is **unpowered**. Setting these pins **HIGH** can damage the GPIO pins. The connector is a fricton-fit connector so no "clicking" and "unclicking" is necessary. Just plug it in nice and snug. 
+
+<figure markdown>
+[![Photo highlighting microSD card slot](./assets/img/Thing_Plus_RP2350-SD.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-SD.jpg "Click to enlarge")
+</figure>
+
 ## Raspberry Pi RM2 Radio Module
 
 The Raspberry Pi RM2 (radio module 2) is built around the same chipset as the previous Raspberry Pi radio module found on boards like the Pico W. The module features both WiFi 4 (802.11n) 2.4GHz and  Bluetooth<sup>&trade;</sup> 5.2 with support for Low Energy (Central and Peripheral) and Classic. 
@@ -48,7 +58,7 @@ The Raspberry Pi RM2 (radio module 2) is built around the same chipset as the pr
 [![Photo highlighting the RM2](./assets/img/Thing_Plus_RP2350-RM2.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-RM2.jpg "Click to enlarge")
 </figure>
 
-It communicates with the RP2350 over SPI. The Thing Plus routes the module's GPIO0 pin to a blue STAT LED to allow users to create a visual indicator of the status of the module. We added this STAT LED connected to the same pin used on the Pico W to make code for that compatible with the Thing Plus - RP2350.
+The RM2 communicates with the RP2350 over SPI and we've designed this board to use the same pins for the radio module as official Raspberry Pi boards (Pico W and Pico 2 W), making it easy to use the radio module without having to adjust anything from those development boards. The Thing Plus routes the module's GPIO0 pin to a blue STAT LED to allow users to create a visual indicator of the status of the module. We added this STAT LED connected to the same pin used on the Pico W to make code for that compatible with the Thing Plus - RP2350.
 
 ## Power Components
 
@@ -76,7 +86,7 @@ The board has a 2-pin JST connector to connect a single-cell Lithium Ion (LiPo) 
 
 The MAX17048's I<sup>2</sup>C lines are pulled up to <b>3.3V_P</b> to allow for customizable power options. Read on below for more information about peripheral power.
 
-## Peripheral Power Control
+### Peripheral Power Control
 
 The board includes a second RT9080 3.3V regulator to control power to the peripheral 3.3V (3.3V_P) rail. This is powered on by default with some options for user control to help conserve power. The RT9080's EN (Enable) pin is tied to GPIO13 so users can drive it LOW in their code to disable this line. It also is tied to the main 3.3V rail through the <b>LP</b> solder jumper so it defaults to powered on. If this solder jumper is opened, it defaults to off when the RP2350 is power-cycled though users can drive the GPIO13 pin HIGH in their code to enable the 3.3V_P rail.
 
@@ -102,17 +112,9 @@ The Thing Plus's pair of PTH headers break out a selection of 21 GPIO pins from 
 
 The pinout includes connections to UART, I<sup>2</sup>C, SPI, 13 GPIO (3 of analog-capable pins) and the WS2812's DATA OUT pin.
 
-## &micro;SD Card Slot
-
-The board has a &micro;SD card slot that connects to the RP2350's SPI bus. Make sure the SPI are **LOW** when the &micro;SD card is **unpowered**. Setting these pins **HIGH** can damage the GPIO pins. The connector is a fricton-fit connector so no "clicking" and "unclicking" is necessary. Just plug it in nice and snug. 
-
-<figure markdown>
-[![Photo highlighting microSD card slot](./assets/img/Thing_Plus_RP2350-SD.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-SD.jpg "Click to enlarge")
-</figure>
-
 ## Buttons
 
-There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RESET button is tied to the RP2350's RUN pin and resets the IC when pressed. The BOOT button puts the RP2350 into bootloader mode when held down during power on or reset.
+There are two buttons on the board labeled <b>RESET</b> and <b>BOOT</b>. The RESET button is tied to the RP2350's RUN pin and resets the IC when pressed. The BOOT button puts the RP2350 into bootloader mode when held down during power on or reset. Read on to the <b>UF2 Bootloader</b> section of this guide for more information on using the bootloader.
 
 <figure markdown>
 [![Photo highlighting RESET & BOOT buttons](./assets/img/Thing_Plus_RP2350-Buttons.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-Buttons.jpg "Click to enlarge")
@@ -126,7 +128,7 @@ The Thing Plus - RP2350 includes three labeled LEDs; <b>PWR</b>, <b>CHG</b> and 
 [![Photo highlighting the four LEDs on the board.](./assets/img/Thing_Plus_RP2350-LEDs.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-LEDs.jpg "Click to enlarge")
 </figure>
 
-The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The yellow <b>CHG</b> LED indicates when the charge circuit is powered. The blue <b>STAT</b> LED is tied to the RM2 radio module GPIO0 to be used for indicating when the module is transmiting/receiving data. The WS2812 RGB LED's DATA IN pin is tied to the RP2350 GPIO14 pin. The RGB LED's DATA OUT pin is routed to the FREEBIE PTH (labeled LED on the board) if users want to daisy-chain more LEDs to the board.
+The red <b>PWR</b> LED indicates when the <b>3.3V</b> rail is powered. The yellow <b>CHG</b> LED indicates when the charge circuit is powered with <b>5V</b> from either the USB-C connector or the V_USB PTH pin. The blue <b>STAT</b> LED is tied to the RM2 radio module GPIO0 to be used for indicating when the module is transmiting/receiving data. The WS2812 RGB LED's DATA IN pin is tied to the RP2350 GPIO14 pin. The RGB LED's DATA OUT pin is routed to the FREEBIE PTH (labeled LED on the board) if users want to daisy-chain more LEDs to the board.
 
 ## Jumpers
 
@@ -154,14 +156,14 @@ The <b>SHLD</b> jumper connects the USB-C connector's shield pin to the board's 
 
 ## Board Dimensions
 
-This board matches the Thing Plus footprint and measures and includes four mounting holes that fit a [4-40 screw](https://www.sparkfun.com/products/10453). Note, the RM2 antenna comes very close to the "top" two mounting holes so take care when securing anything to these holes to avoid damaging the radio's antenna. 
+This board matches the Thing Plus footprint and measures 2.3" x 0.9" (58.42mm x 22.86mm) and includes four mounting holes that fit a [4-40 screw](https://www.sparkfun.com/products/10453). Note, the RM2 antenna comes very close to the "top" two mounting holes so take care when securing anything to these holes to avoid damaging the radio's antenna. 
 
 <figure markdown>
 [![Photo highlighting solder jumpers.](./assets/board_files/SparkFun_Thing_Plus_RP2350-Dimensions.png){ width="600"}](./assets/board_files/SparkFun_Thing_Plus_RP2350-Dimensions.png "Click to enlarge")
 </figure>
 
 ??? tip "Need more measurements?"
-	For more information about the board's dimensions, users can download the [Eagle files](../assets/board_files/eagle_files.zip) for the board. These files can be opened in Eagle and additional measurements can be made with the dimensions tool.
+	For more information about the board's dimensions, users can download the [Eagle files](./assets/board_files/SparkFun_Thing_Plus_RP2350.zip) for the board. These files can be opened in Eagle and additional measurements can be made with the dimensions tool.
 
 	??? info ":octicons-download-16:{ .heart } Eagle - Free Download!"
 		Eagle is a [CAD]("computer-aided design") program for electronics that is free to use for hobbyists and students. However, it does require an account registration to utilize the software.

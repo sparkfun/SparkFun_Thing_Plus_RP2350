@@ -40,6 +40,24 @@ Try playing around with other values between 0 and 255 for the three colors (R, 
 
 Finally, let's run an example to test connecting the Thing Plus - RP2350 to a WiFi network, then access an API and print out the data returned. This example polls a database maintained [here](https://corquaid.github.io/international-space-station-APIs/JSON/people-in-space.json) that lists the number and names of astronauts currently on the ISS and then prints them out. The code also includes some helpful RGB status colors to indicate when the board is connecting to WiFi (RED), downloading data (BLUE), and on success (GREEN).
 
+<div class="grid cards hide col-4" markdown align="center">
+
+-	<figure markdown>
+	[![Photo showing WS2812 set to RED.](./assets/img/Thing_Plus_RP2350-RED.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-RED.jpg "Click to enlarge")
+	<fig caption>LED set to <b>RED</b> while connecting to WiFi.</fig caption>
+	</figure>
+
+-	<figure markdown>
+	[![Photo showing WS2812 set to BLUE.](./assets/img/Thing_Plus_RP2350-BLUE.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-BLUE.jpg "Click to enlarge")
+	<fig caption>LED set to <b>BLUE</b> while downloading.</fig caption>
+	</figure>
+
+-	<figure markdown>
+	[![Photo showing WS2812 set to GREEN.](./assets/img/Thing_Plus_RP2350-GREEN.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-GREEN.jpg "Click to enlarge")
+	<fig caption>LED set to <b>GREEN</b> indicating download success.</fig caption>
+	</figure>
+</div>
+
 Before running the example, adjust the template values in the example called <code>WIFI_NETWORK</code> and <code>WIFI_PASSWORD</code> with your WiFi network ID and password.
 
 ``` py
