@@ -22,7 +22,7 @@ icon: material/book-open-page-variant
 
     <center>
     <article class="video_desc">
-    <iframe src="<Embedded Video>" title="Product Showcase: SparkFun Thing Plus - RP2350" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/umC06onaavo?si=j9rEibxVvqwawaoB" title="Product Showcase: SparkFun Thing Plus - RP2350" frameborder="0" allow="accelerometer; autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </article>
     </center>
 
