@@ -10,7 +10,7 @@ UF2 stands for USB Flashing Format, which was developed by Microsoft for PXT (no
 
 ## Entering the Bootloader
 
-Putting the Pro Micro - RP2350 only requires a couple of presses of the BOOT and RESET buttons. Start by pressing and holding the BOOT button down:
+Putting the Thing Plus - RP2350 into bootloader mode only requires a couple of presses of the BOOT and RESET buttons. Start by pressing and holding the BOOT button down:
 
 <figure markdown>
 [![Pressing the BOOT button.](./assets/img/Thing_Plus_RP2350-uF2_BOOT.jpg){ width="600"}](./assets/img/Thing_Plus_RP2350-uF2_BOOT.jpg "Click to enlarge")

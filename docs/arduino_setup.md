@@ -13,7 +13,7 @@ The SparkFun Thing Plus - RP2350 is supported on the Arduino IDE in the [Arduino
     https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 </code>
 
-Click "OK" to close this menu then navigate to the Boards Manager tool and search for "pico" and download the latest release of "Raspberry Pi Pico" (4.0.1 or later).
+Click "OK" to close this menu then navigate to the Boards Manager tool and search for "pico" and download the latest release of "Raspberry Pi Pico" (4.2.1 or later).
 
 <figure markdown>
 [![Screenshot of board manager tool searching for pico.](./assets/img/arduino_boards.jpg){ width="600"}](./assets/img/arduino_boards.jpg "Click to enlarge")

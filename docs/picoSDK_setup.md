@@ -16,4 +16,4 @@ The Pico C SDK is a C/C++ development kit for Raspberry Pi microcontrollers incl
 
 ### Thing Plus - RP2350 Board Definition
 
-As of release, the Thing Plus - RP2350 does <i>not</i> have it's own board definition in the Pico SDK. Until this definition is added in what should be v2.1 of the SDK, users should select <b>Pico 2</b> for their board when uploading to the Thing Plus. We recommend using [Microsoft Visual Studio](https://code.visualstudio.com/) with the [Pico SDK Extension](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico) in the meantime.
+When using the Pico SDK, make sure to use v2.1 or later and select `sparkfun_thingplus_rp2350` for the board. We recommend using [Microsoft VS Code](https://code.visualstudio.com/) with the [Pico SDK Extension](https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico).
