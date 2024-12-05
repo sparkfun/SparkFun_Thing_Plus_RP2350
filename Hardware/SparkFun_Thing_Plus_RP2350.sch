@@ -30657,7 +30657,7 @@ Switches electrical signals</description>
 <part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LEDGER" device="">
 <attribute name="DESIGNER" value="Dryw Wade"/>
-<attribute name="REV" value="v10"/>
+<attribute name="REV" value="v11"/>
 </part>
 <part name="Y1" library="SparkFun-Clocks" deviceset="CRYSTAL-12MHZ" device="" value="12MHz"/>
 <part name="R9" library="SparkFun-Resistors" deviceset="1KOHM" device="-0402T-1/16W-1%" value="1k"/>
@@ -30883,8 +30883,8 @@ could damage the GPIO pins!</text>
 <attribute name="VALUE" x="368.3" y="66.04" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
 <attribute name="NAME" x="368.3" y="134.874" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="J2" gate="G$1" x="317.5" y="251.46" smashed="yes" rot="R270">
-<attribute name="NAME" x="323.342" y="254" size="1.778" layer="95" rot="R270"/>
+<instance part="J2" gate="G$1" x="317.5" y="248.92" smashed="yes" rot="MR90">
+<attribute name="NAME" x="323.342" y="246.38" size="1.778" layer="95" rot="MR90"/>
 </instance>
 <instance part="J3" gate="J1" x="365.76" y="167.64" smashed="yes">
 <attribute name="VALUE" x="358.394" y="157.48" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
@@ -31559,9 +31559,9 @@ could damage the GPIO pins!</text>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
-<pinref part="J2" gate="G$1" pin="+"/>
 <wire x1="309.88" y1="233.68" x2="309.88" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="309.88" y1="248.92" x2="312.42" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="-"/>
+<wire x1="312.42" y1="248.92" x2="309.88" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -32025,17 +32025,17 @@ could damage the GPIO pins!</text>
 <wire x1="363.22" y1="132.08" x2="363.22" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="-"/>
 <pinref part="SUPPLY9" gate="G$1" pin="V_BATT"/>
-<wire x1="312.42" y1="251.46" x2="309.88" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="251.46" x2="309.88" y2="254" width="0.1524" layer="91"/>
 <pinref part="U6" gate="G$1" pin="VBAT"/>
 <wire x1="284.48" y1="251.46" x2="302.26" y2="251.46" width="0.1524" layer="91"/>
-<junction x="309.88" y="251.46"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="302.26" y1="251.46" x2="309.88" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="243.84" x2="302.26" y2="251.46" width="0.1524" layer="91"/>
 <junction x="302.26" y="251.46"/>
+<pinref part="J2" gate="G$1" pin="+"/>
+<wire x1="312.42" y1="251.46" x2="309.88" y2="251.46" width="0.1524" layer="91"/>
+<junction x="309.88" y="251.46"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="VIN1"/>
