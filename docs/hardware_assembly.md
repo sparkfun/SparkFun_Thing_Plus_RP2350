@@ -23,3 +23,7 @@ Basic assembly of the Thing Plus - RP2350 just requires plugging the board in ov
 	</p>
 
 Users looking to start prototyping with the Thing Plus plugged into a breadboard should solder a pair of [male](https://www.sparkfun.com/products/116) or [stackable](https://www.sparkfun.com/products/15187) headers.
+
+<figure markdown>
+[![Photo demonstrating soldering headers to the Thing Plus - RP2350.](./assets/img/Thing-Plus-RP2350-Camera-Demo-1.jpg){ width="600"}](./assets/img/Thing-Plus-RP2350-Camera-Demo-1.jpg "Click to enlarge")
+</figure>

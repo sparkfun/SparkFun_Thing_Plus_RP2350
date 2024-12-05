@@ -126,6 +126,9 @@ You may also want to get a Qwiic cable or kit to connect the Thing Plus - RP2350
 
 The Thing Plus - RP2350 includes a 2-pin JST connector and integrated charging circuit for an attached single-cell LiPo battery. Below are a few options we recommend for battery-powered applications:
 
+!!! danger "WARNING: LiPo Battery Connector Polarity"
+	The LiPo battery connector on v10 of the Thing Plus - RP2350 is <b>reversed</b> from SparkFun's normal 2-pin JST battery connection. If you are using this board with a battery, follow the silkscreen markings on the board for correct polarity. This means v10 is <b>incompatible</b> with all single-cell LiPo batteries SparkFun carries. We have a fix incoming and v11 of this board will resolve this issue. We'll update this and all other notes about this error once that version is released. 
+
 <div class="grid cards" markdown align="center">
 
 -   <a href="https://www.sparkfun.com/products/18286">

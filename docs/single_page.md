@@ -32,7 +32,7 @@ icon: fontawesome/solid/scroll
 # MicroPython Examples
 --8<-- "./docs/micropython_examples.md:5"
 
-## Arduino Examples
+# Arduino Examples
 --8<-- "./docs/examples.md:5"
 
 # Troubleshooting
