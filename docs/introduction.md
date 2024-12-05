@@ -12,7 +12,7 @@ icon: material/book-open-page-variant
 
 -    <a href="https://www.sparkfun.com/products/25134">
     **SparkFun Thing Plus - RP2350**<br>
-    **SKU:** <WRL-25134>
+    **SKU:** WRL-25134
 
     ---
 
