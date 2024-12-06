@@ -35,6 +35,12 @@ icon: fontawesome/solid/scroll
 # Arduino Examples
 --8<-- "./docs/examples.md:5"
 
+# Vision Demo Assembly:
+--8<-- "./docs/vision_demo_assembly.md:5"
+
+# Vision Demo Code:
+--8<-- "./docs/vision_demo_code.md:5"
+
 # Troubleshooting
 --8<-- "./docs/troubleshooting.md:5"
 

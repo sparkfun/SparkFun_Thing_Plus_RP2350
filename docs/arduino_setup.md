@@ -1,6 +1,6 @@
-
-
-
+---
+icon: simple/arduino
+---
 
 !!! attention
 	If this is your first time using Arduino, please read through our tutorial on [installing the Arduino IDE](https://learn.sparkfun.com/tutorials/installing-arduino-ide). If you have not installed an Arduino library before, we recommend you check out our [installation guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library).

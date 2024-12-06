@@ -261,6 +261,9 @@ nav:
       - CircuitPython: circuitpython_setup.md
       - Arduino: arduino_setup.md
     - MicroPython Examples: micropython_examples.md
+    - Vision Demo:
+      - Demo Assembly: vision_demo_assembly.md
+      - Demo Code: vision_demo_code.md
   - Resources: resources.md
   - Support:
     - Troubleshooting: troubleshooting.md
