@@ -4,7 +4,9 @@
 
 ## LiPo Battery Connector Polarity (v10 only)
 
-The LiPo battery connector on v10 of the Thing Plus - RP2350 is <b>reversed</b> from SparkFun's normal 2-pin JST battery connection. If you are using this board with a battery, follow the silkscreen markings on the board for correct polarity. This means v10 is <b>incompatible</b> with all single-cell LiPo batteries SparkFun carries. We have a fix incoming and v11 of this board will resolve this issue. We'll update this and all other notes about this error once that version is released. 
+The LiPo battery connector on v10 ([DD-27675](https://www.sparkfun.com/products/27675)) of the Thing Plus - RP2350 is <b>reversed</b> from SparkFun's normal 2-pin JST battery connection. If you are using this board with a battery, follow the silkscreen markings on the board for correct polarity. This means v10 is <b>incompatible</b> with all single-cell LiPo batteries SparkFun carries.
+
+The updated version, v11 ([WRL-25134](https://www.sparkfun.com/products/25134)), fixes this issue. 
 
 ## General Troubleshooting Help
 

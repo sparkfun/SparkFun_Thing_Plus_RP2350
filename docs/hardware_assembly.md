@@ -2,8 +2,6 @@
 icon: material/tools
 ---
 
-<!-- This section covers any assembly steps needed to complete the guide. Can be very simple but should include a simple assembly (Qwiic, USB, etc.) and a Soldered Assmebly section link to the PTH Soldering Tutorial-->
-
 ## Qwiic Assembly
 
 Basic assembly of the Thing Plus - RP2350 just requires plugging the board in over USB-C to upload firmware and/or start programming with it. SparkFun offers a variety of Qwiic breakout boards with Python libraries like the [AS6212 Temperature Sensor Breakout](https://www.sparkfun.com/products/18521) connected to the board in the photo below:
